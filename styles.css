@@ -1,0 +1,82 @@
+* { box-sizing: border-box; }
+
+:root { --azul: #123b66; --celeste: #eaf3fb; --texto: #263746; --acento: #f2a900; }
+
+html { scroll-behavior: smooth; }
+
+body { margin: 0; color: var(--texto); font-family: system-ui, Arial, sans-serif; line-height: 1.6; }
+
+.site-header { background: #fff; border-bottom: 1px solid #dce4ec; position: sticky; top: 0; z-index: 10; }
+
+.navbar { display: flex; justify-content: space-between; align-items: center; padding-block: 1rem; }
+
+.navbar-brand { color: var(--azul); text-decoration: none; }
+
+.nav-links { display: flex; gap: 1.2rem; }
+
+.nav-links a { color: var(--azul); text-decoration: none; font-weight: 600; }
+
+.nav-links a:hover, .nav-links a:focus { text-decoration: underline; }
+
+.navbar-toggler { display: none; }
+
+.hero { padding-block: clamp(3rem, 8vw, 7rem); background: linear-gradient(120deg, var(--celeste), #fff); }
+
+.hero > div { max-width: 720px; }
+
+.eyebrow { color: var(--azul); font-weight: 800; letter-spacing: .08em; }
+
+h1 { color: var(--azul); font-size: clamp(2.2rem, 5vw, 4rem); line-height: 1.1; }
+
+h2 { color: var(--azul); margin-bottom: 1rem; }
+
+.section { padding-block: 3rem; }
+
+.program-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+
+.program-card { border: 1px solid #dce4ec; border-radius: 1rem; padding: 1.4rem; box-shadow: 0 4px 16px #123b6610; }
+
+.program-card h3 { color: var(--azul); }
+
+form { max-width: 850px; }
+
+.form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+
+.error { display: block; color: #b42318; min-height: 1.2em; }
+
+#mensaje { margin-top: 1rem; font-weight: 700; }
+
+
+.site-footer { background: var(--azul); color: white; padding: 1.5rem 0; }
+
+.btn-primary { background: var(--azul); border-color: var(--azul); }
+
+.btn-primary:hover { background: #0b2948; }
+
+:focus-visible { outline: 3px solid var(--acento); outline-offset: 3px; }
+
+@media (max-width: 700px) {
+
+  .navbar { flex-wrap: wrap; }
+
+  .navbar-toggler { display: inline-block; }
+
+  .nav-links { display: none; flex-direction: column; width: 100%; padding-top: 1rem; 
+}
+  .nav-links.open { display: flex; }
+
+  .program-grid, .form-grid { grid-template-columns: 1fr; }
+
+}
+.text {
+    margin-top: 1rem;
+    text-align: center;
+    color:#0b2948;
+    font-size: 26px;
+}
+
+.video{
+    display: block;
+    margin: 0 auto; 
+    box-shadow: 0 4px 20px #06060610;
+}
